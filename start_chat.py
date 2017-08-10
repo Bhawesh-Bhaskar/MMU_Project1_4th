@@ -1,6 +1,7 @@
 # import statements
 from globals import current_status_message
 from add_status import add_status
+from add_friend import add_friend
 
 # start_chat() function definition.
 def start_chat(name, age, rating, status):
@@ -24,6 +25,9 @@ def start_chat(name, age, rating, status):
             # validating users input
             if (result == 1):
                 current_status_message = add_status(current_status_message)
+            elif (result == 2):
+                number_of_friends = add_friend()
+                print 'You have %d friends' % (number_of_friends)
             elif (result == 6):
                 # close application
                 show_menu = False

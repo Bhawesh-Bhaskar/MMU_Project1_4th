@@ -1,8 +1,8 @@
+# import statements
+from globals import current_status_message
+
 # start_chat() function definition.
 def start_chat(name, age, rating, status):
-    # current status message is initialized to None.
-    current_status_message = None
-
     # validating users details.
     error_message = None # variable for storing error messages.
 

@@ -1,5 +1,5 @@
 # import statements
-from spy_details import spy_name, spy_salutation, spy_age, spy_rating
+from spy_details import spy_name, spy_salutation, spy_age, spy_rating, spy_is_online
 from start_chat import  start_chat
 
 print "Let's get started!"
@@ -9,7 +9,7 @@ existing = raw_input(question)
 # validating users input
 if (existing.upper() == "Y") :
     # user wants to continue as default user.
-    start_chat(spy_name, spy_age, spy_rating)
+    start_chat(spy_name, spy_age, spy_rating, spy_is_online)
 elif (existing.upper() == "N"):
     # user wants to continue as new user
     spy_name = raw_input("Provide your name here :")
@@ -30,7 +30,7 @@ elif (existing.upper() == "N"):
         spy_is_online = True
 
         # starting chat application.
-        start_chat(spy_name, spy_age, spy_rating)
+        start_chat(spy_name, spy_age, spy_rating, spy_is_online)
     else:
         print "Invalid name. Try again."
 else:

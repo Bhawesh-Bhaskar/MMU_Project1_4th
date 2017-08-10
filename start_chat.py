@@ -1,10 +1,11 @@
 # import statements
-from globals import current_status_message
+#from globals import current_status_message
 from add_status import add_status
 from add_friend import add_friend
 
 # start_chat() function definition.
 def start_chat(name, age, rating, status):
+    from globals import current_status_message
     # validating users details.
     error_message = None # variable for storing error messages.
 

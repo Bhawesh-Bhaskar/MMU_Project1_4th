@@ -7,27 +7,30 @@ question = "Do you want to continue as " + spy_salutation + " " + spy_name + " (
 existing = raw_input(question)
 
 # validating users input
-if (existing == 'Y' or existing == 'y') :
-    # logic here.
+if (existing.upper() == "Y") :
+    # user wants to continue as default user.
     start_chat(spy_name, spy_age, spy_rating)
-elif (existing == 'N' or existing == 'n'):
-    # new users code here.
+elif (existing.upper() == "N"):
+    # user wants to continue as new user
     spy_name = raw_input("Provide your name here :")
     # chek wether spy has input something or not
     if len(spy_name) > 0:
-        # code block if the condition is true.
-        # concatination of salutation and name.
+        # input more details about user.
         spy_age = 0
         spy_rating = 0.0
         spy_is_online = False
+
         spy_slautation = raw_input("What should we all you ? : ")
-        spy_age = raw_input("Enter your age. ?")
-        print type(spy_age)
-        spy_age = int(spy_age)
-        print type(spy_age)
+        spy_age = int(raw_input("Enter your age. ?")) # converting users input to integer (typecasting)
+
+        # concatination of salutation and name of spy.
         spy_name = spy_slautation + " " + spy_name
-        print 'Welcome ' + spy_name + " Glad to have you back with us."
-        print "Alright " + spy_name + "i'd like know liitle bit more about you before we proceed further."
+
+        spy_rating = float(raw_input("What is your spy rating?")) # converting users input to float (typecasting)
+        spy_is_online = True
+
+        # starting chat application.
+        start_chat(spy_name, spy_age, spy_rating)
     else:
         print "Invalid name. Try again."
 else:

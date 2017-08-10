@@ -9,6 +9,11 @@ existing = raw_input(question)
 # validating users input
 if (existing.upper() == "Y") :
     # user wants to continue as default user.
+
+    # concatination of salutation and name of spy.
+    spy_name = spy_salutation + " " + spy_name
+
+    # starting chat application.
     start_chat(spy_name, spy_age, spy_rating, spy_is_online)
 elif (existing.upper() == "N"):
     # user wants to continue as new user
@@ -20,11 +25,11 @@ elif (existing.upper() == "N"):
         spy_rating = 0.0
         spy_is_online = False
 
-        spy_slautation = raw_input("What should we all you ? : ")
+        spy_salutation = raw_input("What should we all you ? : ")
         spy_age = int(raw_input("Enter your age. ?")) # converting users input to integer (typecasting)
 
         # concatination of salutation and name of spy.
-        spy_name = spy_slautation + " " + spy_name
+        spy_name = spy_salutation + " " + spy_name
 
         spy_rating = float(raw_input("What is your spy rating?")) # converting users input to float (typecasting)
         spy_is_online = True

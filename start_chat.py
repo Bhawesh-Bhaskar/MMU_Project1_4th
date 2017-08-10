@@ -1,5 +1,6 @@
 # import statements
 from globals import current_status_message
+from add_status import add_status
 
 # start_chat() function definition.
 def start_chat(name, age, rating, status):
@@ -22,9 +23,9 @@ def start_chat(name, age, rating, status):
 
             # validating users input
             if (result == 1):
-                # action 1
-                pass
-            elif (result == 2):
+                current_status_message = add_status(current_status_message)
+            elif (result == 6):
+                # close application
                 show_menu = False
             else:
                 print "wrong choice try again."

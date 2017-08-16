@@ -14,13 +14,23 @@ def start_chat(name, age, rating, status):
         error_message = "Invalid age. Provide correct details."
         print error_message
     else:
-        welcome_message = "Authentication complete. Welcome\n Name : " + name + "\nAge: " + str(age) + "\nRating: " + str(rating) + "\nProud to have you onboard"
+        welcome_message = "Authentication complete. Welcome\n " \
+                          "Name : " + name + "\n" \
+                          "Age: " + str(age) + "\n" \
+                          "Rating: " + str(rating) + "\n" \
+                          "Proud to have you onboard"
         print welcome_message
 
         # displaying menu for user.
         show_menu = True
         while show_menu:
-            menu_choices = "What do you want to do? \n 1. Add a status update \n 2. Add a friend \n 3. Send a secret message \n 4. Read a secret message \n 5. Read Chats from a user \n 6. Close Application \n"
+            menu_choices = "What do you want to do? \n " \
+                           "1. Add a status update \n " \
+                           "2. Add a friend \n " \
+                           "3. Send a secret message \n " \
+                           "4. Read a secret message \n " \
+                           "5. Read Chats from a user \n " \
+                           "6. Close Application \n"
             result = int(raw_input(menu_choices))
 
             # validating users input

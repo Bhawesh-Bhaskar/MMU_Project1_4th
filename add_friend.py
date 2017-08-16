@@ -11,21 +11,21 @@ def add_friend():
         'is_online': False
     }
     new_friend['name'] = raw_input("Please add your friend's name: ")
-    new_salutation = raw_input("Are they Mr. or Ms.?: ")
+    new_friend['salutation']= raw_input("Are they Mr. or Ms.?: ")
 
     # concatination.
-    new_name = new_name + " " + new_salutation
+    new_friend['name'] = new_friend['name'] + " " + new_friend['salutation']
 
-    new_age = int(raw_input("Age? "))
+    new_friend['age'] = int(raw_input("Age? "))
 
-    new_rating = float(raw_input("Spy rating? "))
+    new_friend['rating'] = float(raw_input("Spy rating? "))
 
     # users input validations
-    if len(new_name) > 0 and new_age > 12 and new_age < 50:
+    if len(new_friend['name']) > 0 and new_friend['age'] > 12 and new_friend['age'] < 50:
         friends.append(new_friend)
         print 'Friend Added!'
     else:
         print 'Sorry! Invalid entry. We can\'t add spy with the details you provided'
 
     # returning total no of friends.
-    return len(friends_name)
+    return len(friends)

@@ -3,6 +3,7 @@
 from add_status import add_status
 from add_friend import add_friend
 from send_message import send_message
+from read_message import read_message
 
 # start_chat() function definition.
 def start_chat(name, age, rating, status):
@@ -42,6 +43,8 @@ def start_chat(name, age, rating, status):
                 print 'You have %d friends' % (number_of_friends)
             elif(result == 3):
                 send_message()
+            elif (result == 4):
+                read_message()
             elif (result == 6):
                 # close application
                 show_menu = False
